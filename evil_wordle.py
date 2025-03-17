@@ -121,11 +121,11 @@ class Keyboard:
             "asdfghjkl",
             "zxcvbnm"
             ]
-        keyboard_rows = []
+        rows_formatted = []
         for row in keyboard_rows:
             aligned_row = " ".join(color_word(self.colors[char], char) for char in row)
-            keyboard_rows.append = aligned_row
-        return "\n".join(keyboard_rows)
+            rows_formatted.append = aligned_row
+        return "\n".join(rows_formatted)
 
 class WordFamily:
     """
