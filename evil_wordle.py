@@ -178,9 +178,9 @@ class WordFamily:
         if not isinstance(other, WordFamily):
             raise NotImplementedError("< operator only valid for WordFamily comparisons.")
         if len(self.words) != len(other.words):
-            return len(self.words) < len(other.words)
+            return len(self.words) > len(other.words)
         if self.difficulty != other.difficulty:
-            return self.difficulty < other.difficulty
+            return self.difficulty > other.difficulty
         return self.feedback_colors < other.feedback_colors
         return False
 
