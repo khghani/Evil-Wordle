@@ -181,6 +181,7 @@ class WordFamily:
             return len(self.words) < len(other.words)
         if self.difficulty != other.difficulty:
             return self.difficulty < other.difficulty
+        return self.feedback_colors < other.feedback_colors
         return False
 
     # DO NOT change this method.
