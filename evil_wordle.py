@@ -347,14 +347,14 @@ def get_feedback_colors(secret_word, guessed_word):
           - Letters not in secret_word are marked with NOT_IN_WORD_COLOR. The list will be of
             length 5 with the ANSI coloring in each index as the returned value.
     """
-    feedback = [None] * NUM_LETTERS
+    feedback = [NOT_IN_WORD_COLOR] * NUM_LETTERS
     hidden_words = list(secret_word)
 
     # Modify this! This is just starter code.
     for i in range(NUM_LETTERS):
         if guessed_word[i] == secret_word[i]:
             feedback[i] = CORRECT_COLOR
-            hidden_words = None
+            hidden_words[i] = None
         if feedback[i] == NOT_IN_WORD_COLOR and guessed_word[i] in hidden_words:
             feedback[i] = WRONG_SPOT_COLOR
             hidden_words[hidden_words.index(guessed_word[i])] = None
