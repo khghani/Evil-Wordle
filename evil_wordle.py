@@ -117,9 +117,9 @@ class Keyboard:
               and arranged to match a typical keyboard layout.
         """
         keyboard_rows = [
-            "qwertuiop",
-            "asdfghjkl",
-            "zxcvbnm"
+            ("qwertuiop",0),
+            ("asdfghjkl", 1),
+            ("zxcvbnm", 3)
             ]
         rows_formatted = []
         for row in keyboard_rows:
