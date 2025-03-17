@@ -95,7 +95,6 @@ class Keyboard:
 
 
 
-    # TODO: Modify this method. You may delete this comment when you are done.
     def __str__(self):
         """
         Returns a string representation of the keyboard, showing each letter in its
@@ -117,7 +116,16 @@ class Keyboard:
         post: Returns a formatted string with each letter colored according to feedback
               and arranged to match a typical keyboard layout.
         """
-        return ""
+        keyboard_rows = [
+            "qwertuiop",
+            "asdfghjkl",
+            "zxcvbnm"
+            ]
+        keyboard_rows = []
+        for row in keyboard_rows:
+            aligned_row = " ".join(color_word(self.colors[char], char) for char in row)
+            keyboard_rows.append = aligned_row
+        return "\n".join(keyboard_rows)
 
 class WordFamily:
     """
